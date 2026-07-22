@@ -1,0 +1,24 @@
+# Local tooling
+.agents/
+.codex/
+.vs/
+.vscode/
+
+# OS/editor noise
+Thumbs.db
+Desktop.ini
+*.tmp
+*.bak
+
+# s&box / game build output
+bin/
+obj/
+.generated/
+artifacts/
+temp/
+cache/
+
+# Large source-control-unfriendly working files can be archived separately if needed.
+*.blend1
+*.blend2
+
