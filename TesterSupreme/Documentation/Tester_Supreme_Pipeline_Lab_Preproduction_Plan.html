@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tester Supreme - 0.0 Pipeline Lab Pre-Production Plan</title>
+<style>
+  @page { size: Letter; margin: 0.85in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #23303a;
+    font-size: 10.7pt;
+    line-height: 1.45;
+    margin: 0;
+  }
+  .banner {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #1f7f93;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccd3d8;
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+  }
+  .section { page-break-before: always; }
+  .section:first-of-type { page-break-before: avoid; }
+  h1.doctitle {
+    font-size: 34pt;
+    color: #16232f;
+    text-align: center;
+    margin: 70px 0 6px 0;
+    letter-spacing: 0.02em;
+  }
+  h2.subtitle {
+    font-size: 19pt;
+    color: #1f7f93;
+    text-align: center;
+    margin: 0 0 14px 0;
+  }
+  p.tagline {
+    text-align: center;
+    font-size: 12pt;
+    color: #3a4a55;
+    margin: 0 0 10px 0;
+  }
+  hr.orange {
+    border: none;
+    border-top: 2.5px solid #d99a3d;
+    width: 220px;
+    margin: 10px auto 26px auto;
+  }
+  p.cover-lead {
+    text-align: center;
+    font-weight: 700;
+    font-size: 11.5pt;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 16pt;
+    color: #16232f;
+    border-bottom: 2px solid #1f7f93;
+    padding-bottom: 6px;
+    margin: 0 0 14px 0;
+  }
+  h2 .num { color: #1f7f93; margin-right: 8px; }
+  p.lead {
+    font-style: italic;
+    color: #3a4a55;
+    margin: 0 0 16px 0;
+  }
+  h3.label {
+    font-size: 9.3pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #1f7f93;
+    text-transform: uppercase;
+    margin: 20px 0 8px 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 14px;
+    font-size: 10pt;
+  }
+  th {
+    background: #16232f;
+    color: #fff;
+    text-align: left;
+    padding: 7px 10px;
+    font-size: 9.5pt;
+  }
+  td {
+    border: 1px solid #ccd3d8;
+    padding: 6px 10px;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f2f4f6; }
+  ol, ul.plain { margin: 6px 0 14px 22px; padding: 0; }
+  ol > li, ul.plain > li { margin-bottom: 5px; }
+  ul.bullets { list-style: none; margin: 0 0 14px 0; padding: 0; }
+  ul.bullets li { padding-left: 14px; position: relative; margin-bottom: 4px; }
+  ul.bullets li:before { content: "•"; color: #1f7f93; position: absolute; left: 0; }
+  ul.checklist { list-style: none; margin: 0 0 14px 0; padding: 0; }
+  ul.checklist li { padding-left: 20px; position: relative; margin-bottom: 5px; }
+  ul.checklist li:before { content: "\2610"; position: absolute; left: 0; color: #3a4a55; }
+  .code {
+    background: #eef1f3;
+    border: 1px solid #dfe4e7;
+    border-radius: 3px;
+    padding: 10px 12px;
+    font-family: "Consolas", monospace;
+    font-size: 9.3pt;
+    white-space: pre;
+    margin-bottom: 14px;
+    overflow-x: auto;
+  }
+  .box {
+    border-radius: 3px;
+    padding: 10px 14px;
+    margin: 6px 0 18px 0;
+    border-left: 5px solid;
+  }
+  .box .box-title { font-weight: 700; margin-bottom: 3px; display: block; }
+  .box.rule    { background: #dcedf3; border-color: #2f8fa6; }
+  .box.warning { background: #faf1da; border-color: #d99a3d; }
+  .box.pass    { background: #e2f0e4; border-color: #4b8f5f; }
+  .tree {
+    background: #f7f9fa;
+    border: 1px solid #dfe4e7;
+    border-radius: 3px;
+    padding: 10px 14px;
+    font-family: "Consolas", monospace;
+    font-size: 9.3pt;
+    white-space: pre;
+    margin-bottom: 14px;
+  }
+  .footer-note { font-size: 8.7pt; color: #7a8891; text-align: right; margin-top: 30px; }
+  .toc-list { columns: 1; }
+  .toc-list a { color: #23303a; text-decoration: none; }
+  .app-letter { color: #1f7f93; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h1 class="doctitle">TESTER SUPREME</h1>
+  <h2 class="subtitle">0.0 PIPELINE LAB</h2>
+  <p class="tagline">Blender-to-s&amp;box Asset Pipeline and Pre-Production Plan</p>
+  <hr class="orange">
+  <p class="cover-lead">Project foundation before gameplay development</p>
+  <table>
+    <tr><th>Plan item</th><th>Decision</th></tr>
+    <tr><td>Art direction</td><td>Goofy, stylized mid-poly; exaggerated but grounded</td></tr>
+    <tr><td>Target platform</td><td>PC only</td></tr>
+    <tr><td>Pipeline</td><td>Blender &rarr; FBX &rarr; ModelDoc &rarr; s&amp;box scene/prefab</td></tr>
+    <tr><td>Primary goal</td><td>A reliable, versioned modular-model workflow at correct scale, built to hold up as the framework grows past this lab</td></tr>
+    <tr><td>First gameplay gate</td><td>Player movement and one basic interaction sequence</td></tr>
+  </table>
+  <p style="text-align:center; margin-top:50px;">Version 2.0 &nbsp;|&nbsp; July 2026</p>
+  <p style="text-align:center; font-style:italic; color:#1f7f93; margin-top:2px;">Internal working guide &mdash; supersedes Version 1.0</p>
+
+  <div class="box rule" style="max-width:520px; margin:30px auto 0 auto;">
+    <span class="box-title">What changed in this revision</span>
+    Version 2.0 folds in a scaling and robustness pass: version control for binary assets,
+    engine/tool version pinning, a collision-authoring convention, texel density and lightmap
+    UV standards, poly budget targets, template versioning, an automation roadmap, and a risk
+    register. See Appendix E for the full revision history and why each change was made.
+  </div>
+</div>
+
+<!-- ============ 01 Purpose ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">01</span>Purpose and Success Definition</h2>
+  <p class="lead">This plan establishes the production pipeline before Tester Supreme gameplay begins.</p>
+  <p>Tester Supreme 0.0 is a controlled pre-production phase. Its purpose is to prove that assets
+  can be modeled in Blender using inches, exported consistently, imported into s&amp;box at the
+  correct scale and orientation, converted into reusable prefabs, and assembled into modular
+  rooms, and used safely by the built-in player controller.</p>
+
+  <div class="box rule">
+    <span class="box-title">The governing rule</span>
+    Gameplay production does not begin until a new model can travel from Blender to a usable
+    s&amp;box prefab without repeated manual correction.
+  </div>
+
+  <h3 class="label">What the pipeline must prove</h3>
+  <ul class="bullets">
+    <li>The official Citizen human reference can be used in Blender as a reliable visual scale guide.</li>
+    <li>A verified FBX export preset produces correct scale, orientation, pivots, normals and material slots.</li>
+    <li>Modular floors, walls, corners, doorways and ceilings connect without visible gaps or collision seams.</li>
+    <li>Shared s&amp;box materials can be assigned and survive reimporting.</li>
+    <li>Prefab instances update when the source model is revised.</li>
+    <li>The built-in player controller can walk, jump, fall, use stairs, cross seams and interact with the test kit.</li>
+    <li>The workflow stays reproducible and low-friction as the number of modular assets grows well past the
+    size of this test kit &mdash; see Section 16.</li>
+  </ul>
+
+  <h3 class="label">Outside this phase</h3>
+  <ul class="bullets">
+    <li>Weapons, enemies, progression, scoring and narrative content.</li>
+    <li>Final visual polish, unique wear, complex decals or production-quality texture variation.</li>
+    <li>Multiplayer, networking, monetization or public release preparation.</li>
+    <li>Large-scale architecture production before scale and snapping have been validated.</li>
+    <li>Performance optimization, LODs and draw-distance culling.</li>
+  </ul>
+</div>
+
+<!-- ============ 02 Roadmap ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">02</span>Internal Version Roadmap</h2>
+  <table>
+    <tr><th>Version</th><th>Milestone</th><th>Definition</th></tr>
+    <tr><td>0.0.1</td><td>Foundation</td><td>Folders, empty s&amp;box project, Blender template, Citizen reference, scale and FBX calibration, version control and environment baseline.</td></tr>
+    <tr><td>0.0.2</td><td>Modular Test Kit</td><td>First architecture, movement, material and interactive models imported and configured.</td></tr>
+    <tr><td>0.0.3</td><td>Pipeline Lab</td><td>Modular scenario assembled; player movement, jump, fall, stairs, ramps and seams tested.</td></tr>
+    <tr><td>0.0.4</td><td>Interaction and Reimport</td><td>Button, warning light, sliding door, physics crate and source-model update tests.</td></tr>
+    <tr><td>0.0.5</td><td>Production Kit Start</td><td>First stylized Calibration Wing modular family built from the approved template.</td></tr>
+    <tr><td>0.1</td><td>Public Calibration Wing</td><td>A complete miniature game with three experiments, progression and a clear ending.</td></tr>
+  </table>
+  <div class="box warning">
+    <span class="box-title">Public-versus-internal boundary</span>
+    Versions 0.0.1 through 0.0.5 are development milestones. Version 0.1 is the first public-facing
+    early-development build.
+  </div>
+  <p style="font-size:9.7pt; color:#3a4a55;">Automation introduced in Section 16 begins informally at 0.0.2 (batch export)
+  and is expected to mature through 0.0.5 as the number of tracked assets grows beyond what manual checklists can
+  reliably cover.</p>
+</div>
+
+<!-- ============ 03 Folder Structure ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">03</span>Master Folder Structure</h2>
+  <p class="lead">Keep runtime assets, editable source files and project documentation separate.</p>
+  <div class="tree">TesterSupreme/
+&#9500;&#9472; Game/
+&#9474;   &#9500;&#9472; Assets/
+&#9474;   &#9474;   &#9500;&#9472; models/
+&#9474;   &#9474;   &#9474;   &#9500;&#9472; calibration/
+&#9474;   &#9474;   &#9474;   &#9500;&#9472; architecture/
+&#9474;   &#9474;   &#9474;   &#9500;&#9472; props/
+&#9474;   &#9474;   &#9474;   &#9500;&#9472; interactive/
+&#9474;   &#9474;   &#9474;   &#9500;&#9472; characters/
+&#9474;   &#9474;   &#9474;   &#9492;&#9472; weapons/
+&#9474;   &#9474;   &#9500;&#9472; materials/
+&#9474;   &#9474;   &#9500;&#9472; textures/
+&#9474;   &#9474;   &#9500;&#9472; prefabs/
+&#9474;   &#9474;   &#9500;&#9472; scenes/
+&#9474;   &#9474;   &#9500;&#9472; sounds/
+&#9474;   &#9474;   &#9500;&#9472; particles/
+&#9474;   &#9474;   &#9492;&#9472; ui/
+&#9474;   &#9500;&#9472; Code/
+&#9474;   &#9474;   &#9500;&#9472; Core/
+&#9474;   &#9474;   &#9500;&#9472; Interaction/
+&#9474;   &#9474;   &#9500;&#9472; Player/
+&#9474;   &#9474;   &#9500;&#9472; Testing/
+&#9474;   &#9474;   &#9492;&#9472; Debug/
+&#9474;   &#9492;&#9472; Libraries/
+&#9500;&#9472; Production/
+&#9474;   &#9500;&#9472; Blender/
+&#9474;   &#9474;   &#9500;&#9472; Templates/
+&#9474;   &#9474;   &#9500;&#9472; Calibration/
+&#9474;   &#9474;   &#9500;&#9472; Architecture/
+&#9474;   &#9474;   &#9500;&#9472; Props/
+&#9474;   &#9474;   &#9500;&#9472; Interactive/
+&#9474;   &#9474;   &#9500;&#9472; Characters/
+&#9474;   &#9474;   &#9492;&#9472; Weapons/
+&#9474;   &#9500;&#9472; References/
+&#9474;   &#9474;   &#9500;&#9472; SboxCitizen/
+&#9474;   &#9474;   &#9500;&#9472; ArtDirection/
+&#9474;   &#9474;   &#9492;&#9472; Measurements/
+&#9474;   &#9500;&#9472; Textures/
+&#9474;   &#9474;   &#9500;&#9472; Source/
+&#9474;   &#9474;   &#9500;&#9472; Bakes/
+&#9474;   &#9474;   &#9492;&#9472; Export/
+&#9474;   &#9492;&#9472; ExportArchive/
+&#9474;       &#9500;&#9472; Models/
+&#9474;       &#9492;&#9472; Textures/
+&#9500;&#9472; Documentation/
+&#9492;&#9472; ReferenceScreenshots/</div>
+
+  <div class="box warning">
+    <span class="box-title">Placeholder folders</span>
+    <b>Characters/</b>, <b>weapons/</b>, <b>sounds/</b> and <b>ui/</b> exist in the scaffold now but have no
+    process defined until their owning phase begins (0.1 and later). Do not populate them with content or
+    ad-hoc conventions during the Pipeline Lab &mdash; an empty, reserved folder is intentional, not an oversight.
+  </div>
+
+  <h3 class="label">Initial s&amp;box scenes</h3>
+  <div class="code">Game/Assets/scenes/development/pipeline_lab.scene
+Game/Assets/scenes/tests/scale_test.scene
+Game/Assets/scenes/tests/material_test.scene
+Game/Assets/scenes/tests/interaction_test.scene</div>
+
+  <h3 class="label">Required documentation files</h3>
+  <table>
+    <tr><th>File</th><th>Purpose</th></tr>
+    <tr><td>PIPELINE.md</td><td>High-level production process and approval status.</td></tr>
+    <tr><td>VERSION_CONTROL.md</td><td>Git LFS policy, tracked/ignored paths, branching notes. See Section 04.</td></tr>
+    <tr><td>BLENDER_TEMPLATE.md</td><td>Units, collections, scene reference and template rules.</td></tr>
+    <tr><td>FBX_EXPORT_SETTINGS.md</td><td>Verified exporter values, known exceptions and the recorded Blender/s&amp;box environment baseline.</td></tr>
+    <tr><td>ASSET_NAMING.md</td><td>Models, materials, textures, prefabs and scene naming.</td></tr>
+    <tr><td>MODULAR_DIMENSIONS.md</td><td>Approved module dimensions, pivots and snapping rules.</td></tr>
+    <tr><td>MATERIAL_LIBRARY.md</td><td>Shared materials, texture sets, texel density and intended uses.</td></tr>
+    <tr><td>IMPORT_CHECKLIST.md</td><td>Per-asset ModelDoc, collision and prefab checklist.</td></tr>
+    <tr><td>TEST_LOG.md</td><td>Failures, observations, fixes and retest results.</td></tr>
+  </table>
+</div>
+
+<!-- ============ 04 NEW Version Control & Environment ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">04</span>Version Control and Environment Baseline</h2>
+  <p class="lead">Binary art assets and a fast-moving engine both need explicit rules, or the pipeline quietly drifts.</p>
+
+  <h3 class="label">Source control for binary assets</h3>
+  <p>Track <code>.blend</code>, <code>.fbx</code> and image/audio source files with Git LFS rather than
+  plain git. Plain git stores every binary revision in full inside history, which gets slow and heavy
+  fast once the modular kit grows past a handful of assets &mdash; exactly the growth this project is
+  planning for.</p>
+  <div class="code">*.blend filter=lfs diff=lfs merge=lfs -text
+*.fbx   filter=lfs diff=lfs merge=lfs -text
+*.png   filter=lfs diff=lfs merge=lfs -text
+*.psd   filter=lfs diff=lfs merge=lfs -text
+*.wav   filter=lfs diff=lfs merge=lfs -text</div>
+  <ul class="checklist">
+    <li>Git LFS installed and initialized before the first binary asset is committed.</li>
+    <li>.gitattributes (above) committed before the Foundation milestone closes.</li>
+    <li>Compiled or generated s&amp;box output (bin/, obj/, .generated/, cache/) stays out of version control.</li>
+  </ul>
+
+  <h3 class="label">Environment pinning</h3>
+  <p>s&amp;box is under active development and Blender's FBX exporter behavior varies by version.
+  A calibration that passes today can silently fail after either tool updates. Record the environment
+  the calibration was locked against, and re-check it whenever either tool changes.</p>
+  <table>
+    <tr><th>Field</th><th>Recorded value</th></tr>
+    <tr><td>Blender version</td><td>&nbsp;</td></tr>
+    <tr><td>s&amp;box build / branch</td><td>&nbsp;</td></tr>
+    <tr><td>Recorded date</td><td>&nbsp;</td></tr>
+    <tr><td>Locked by</td><td>&nbsp;</td></tr>
+  </table>
+
+  <div class="box rule">
+    <span class="box-title">Why this matters</span>
+    A calibration cube that measured correctly last month is not proof it still measures correctly
+    today. Treat any Blender or s&amp;box update as a reason to recheck, not just a reason to keep working.
+  </div>
+
+  <h3 class="label">Recalibration trigger</h3>
+  <ul class="checklist">
+    <li>Blender updated since the last recorded environment.</li>
+    <li>s&amp;box updated since the last recorded environment.</li>
+    <li>Re-export and re-measure cal_cube_12in against the current environment.</li>
+    <li>Record the result in TEST_LOG.md even when nothing changed.</li>
+  </ul>
+</div>
+
+<!-- ============ 05 Empty Project ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">05</span>Create the Empty s&amp;box Project</h2>
+  <ol>
+    <li>Create a new Game project using the cleanest available empty-project option.</li>
+    <li>Save the first scene as Assets/scenes/development/pipeline_lab.scene.</li>
+    <li>Add basic neutral lighting and a temporary floor.</li>
+    <li>Add the standard playable character/controller from the current sample setup.</li>
+    <li>Confirm that the player can look, walk, jump and fall before importing custom assets.</li>
+    <li>Install and initialize Git LFS, then commit the .gitattributes from Section 04 before adding any binary reference assets.</li>
+    <li>Initialize version control and commit the untouched project baseline.</li>
+    <li>Record the current Blender and s&amp;box versions in FBX_EXPORT_SETTINGS.md as the initial environment baseline.</li>
+  </ol>
+  <div class="box warning">
+    <span class="box-title">Use samples as references, not as the project foundation</span>
+    Copy only the minimum controller setup required for testing. Avoid inheriting a large sample game
+    that obscures which systems belong to Tester Supreme.
+  </div>
+</div>
+
+<!-- ============ 06 Citizen ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">06</span>Citizen Human Reference</h2>
+  <p class="lead">Use the official male human reference as the Blender equivalent of the Roblox R15 scale mannequin.</p>
+  <h3 class="label">Source and destination</h3>
+  <div class="code">Source:
+sbox/addons/citizen/Assets/models/citizen_human/citizen_human_male_REF.fbx
+
+Project copy:
+TesterSupreme/Production/References/SboxCitizen/citizen_human_male_REF.fbx</div>
+  <ul class="checklist">
+    <li>Copy the reference file; do not move or edit the original installed file.</li>
+    <li>Keep the copied master unchanged and use it only as a visual modeling reference.</li>
+    <li>Never include the Citizen reference in architecture or prop FBX exports.</li>
+    <li>Do not parent modular assets to the Citizen hierarchy.</li>
+    <li>Validate Blender scale against the actual playable s&amp;box controller before locking measurements.</li>
+  </ul>
+</div>
+
+<!-- ============ 07 Blender Template ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">07</span>Blender Modeling Template</h2>
+  <h3 class="label">Template file</h3>
+  <div class="code">Production/Blender/Templates/TS_SBOX_MODELING_TEMPLATE.blend</div>
+  <h3 class="label">Unit settings</h3>
+  <table>
+    <tr><th>Setting</th><th>Initial value</th></tr>
+    <tr><td>Unit System</td><td>Imperial</td></tr>
+    <tr><td>Length</td><td>Inches</td></tr>
+    <tr><td>Unit Scale</td><td>1.000 initially; lock only after calibration</td></tr>
+    <tr><td>Modeling input</td><td>Enter dimensions explicitly in inches</td></tr>
+    <tr><td>Grid snap increment</td><td>8 in &mdash; matches wall thickness and the module family in Appendix B</td></tr>
+  </table>
+  <h3 class="label">Template collections</h3>
+  <div class="tree">TS_SBOX_MODELING_TEMPLATE.blend
+&#9500;&#9472; _REFERENCE
+&#9474;   &#9500;&#9472; Citizen_Male
+&#9474;   &#9500;&#9472; Scale_Rulers
+&#9474;   &#9500;&#9472; Axis_Markers
+&#9474;   &#9492;&#9472; Ground_Reference
+&#9500;&#9472; _WORK
+&#9474;   &#9500;&#9472; Architecture
+&#9474;   &#9500;&#9472; Props
+&#9474;   &#9492;&#9472; Interactive
+&#9500;&#9472; _COLLISION_REFERENCE
+&#9500;&#9472; _EXPORT
+&#9492;&#9472; _TEMP</div>
+  <table>
+    <tr><th>Collection</th><th>Use</th></tr>
+    <tr><td>_REFERENCE</td><td>Citizen, rulers, orientation markers and ground reference. Never exported.</td></tr>
+    <tr><td>_WORK</td><td>Current editable production geometry.</td></tr>
+    <tr><td>_COLLISION_REFERENCE</td><td>Optional simplified shapes used while planning collision.</td></tr>
+    <tr><td>_EXPORT</td><td>Only finished objects intended for the current FBX export.</td></tr>
+    <tr><td>_TEMP</td><td>Boolean cutters, backup geometry and experiments. Never exported.</td></tr>
+  </table>
+</div>
+
+<!-- ============ 08 Import Citizen ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">08</span>Import and Verify the Citizen</h2>
+  <ol>
+    <li>Import citizen_human_male_REF.fbx into the Blender template.</li>
+    <li>Move all imported objects into _REFERENCE/Citizen_Male.</li>
+    <li>Preserve the imported hierarchy and transforms during the first inspection.</li>
+    <li>Place the visible feet at the Z = 0 ground reference.</li>
+    <li>Add a separate 72-inch marker and compare it with the imported body.</li>
+    <li>Record the imported height, object scale and importer settings in BLENDER_TEMPLATE.md.</li>
+    <li>Disable the Citizen collection from rendering and prevent accidental selection.</li>
+  </ol>
+  <div class="box warning">
+    <span class="box-title">Calibration warning</span>
+    The reference FBX may contain unit metadata that Blender interprets differently from new
+    inch-authored assets. Do not force a conversion value until both the reference and an exported
+    calibration cube have been checked in s&amp;box.
+  </div>
+  <h3 class="label">Permanent template references</h3>
+  <ul class="bullets">
+    <li>12-inch cube</li><li>24-inch ruler</li><li>48-inch ruler</li>
+    <li>72-inch human-height marker</li><li>96-inch height marker</li>
+    <li>FRONT arrow</li><li>UP arrow</li><li>Ground plane at Z = 0</li>
+  </ul>
+</div>
+
+<!-- ============ 09 Pivot Standards ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">09</span>Pivot, Origin and Transform Standards</h2>
+  <table>
+    <tr><th>Asset type</th><th>Origin / pivot</th></tr>
+    <tr><td>Floor tile</td><td>Bottom rear-left corner</td></tr>
+    <tr><td>Wall panel</td><td>Bottom rear-left corner at the back face</td></tr>
+    <tr><td>Ceiling panel</td><td>Consistent corner aligned with the floor convention</td></tr>
+    <tr><td>Freestanding prop</td><td>Bottom center</td></tr>
+    <tr><td>Crate</td><td>Bottom center</td></tr>
+    <tr><td>Door frame</td><td>Bottom rear-left corner</td></tr>
+    <tr><td>Swing door</td><td>Exact hinge axis</td></tr>
+    <tr><td>Sliding door</td><td>Center or movement origin used by the animation</td></tr>
+    <tr><td>Button</td><td>Center of pressing motion</td></tr>
+    <tr><td>Terminal</td><td>Bottom center</td></tr>
+    <tr><td>Rotating machine</td><td>Exact mechanical rotation axis</td></tr>
+  </table>
+  <h3 class="label">Normal export-ready transforms</h3>
+  <div class="code">Location: 0, 0, 0
+Rotation: 0, 0, 0
+Scale:    1, 1, 1</div>
+  <div class="box rule">
+    <span class="box-title">Fix bad pivots in Blender</span>
+    Do not compensate for a wrong origin by repeatedly offsetting every scene instance in s&amp;box.
+    The source asset is the correct place to fix it.
+  </div>
+</div>
+
+<!-- ============ 10 Scale and FBX Calibration ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">10</span>Scale and FBX Calibration Set</h2>
+  <h3 class="label">Calibration Blender file</h3>
+  <div class="code">Production/Blender/Calibration/TS_EXPORT_CALIBRATION.blend</div>
+  <table>
+    <tr><th>Asset</th><th>Dimensions / form</th><th>Test purpose</th></tr>
+    <tr><td>cal_cube_12in</td><td>12 &times; 12 &times; 12 inches</td><td>Basic dimensional accuracy</td></tr>
+    <tr><td>cal_floor_96in</td><td>96 &times; 96 &times; 4 inches</td><td>Grid alignment and modular snapping</td></tr>
+    <tr><td>cal_wall_96x120</td><td>96 &times; 120 &times; 8 inches</td><td>Human scale, doorway and vertical proportion</td></tr>
+    <tr><td>cal_axis_marker</td><td>Asymmetrical labeled object</td><td>Forward, up, mirroring and rotation</td></tr>
+    <tr><td>cal_material_block</td><td>Four visible surface zones</td><td>Painted, rough, metallic and emissive response</td></tr>
+  </table>
+
+  <div class="box rule">
+    <span class="box-title">Forward / Up is a hypothesis to test, not an assumption</span>
+    Do not assume Blender's default Forward/Up mapping matches what s&amp;box's ModelDoc importer
+    expects. Try candidate combinations against the asymmetrical axis marker in Bay A before locking
+    anything, and record the exact combination that measured correctly &mdash; never leave it on
+    "auto" once approved. This is one of the most common silent-failure points in a new engine pipeline.
+  </div>
+
+  <h3 class="label">Initial binary FBX candidate settings</h3>
+  <table>
+    <tr><th>Setting</th><th>Starting value</th></tr>
+    <tr><td>Limit To</td><td>Selected Objects</td></tr>
+    <tr><td>Object Types</td><td>Mesh</td></tr>
+    <tr><td>Scale</td><td>1.000</td></tr>
+    <tr><td>Apply Unit</td><td>Enabled initially; validate</td></tr>
+    <tr><td>Apply Transform</td><td>Test before locking</td></tr>
+    <tr><td>Bake Animation</td><td>Disabled for static kit</td></tr>
+    <tr><td>Add Leaf Bones</td><td>Disabled</td></tr>
+    <tr><td>Path Mode</td><td>Auto or Strip</td></tr>
+    <tr><td>Forward / Up</td><td>Resolve empirically against the axis marker; record the result</td></tr>
+  </table>
+
+  <h3 class="label">Calibration export procedure</h3>
+  <ol>
+    <li>Select one calibration object and place it in _EXPORT.</li>
+    <li>Apply transforms only after the origin is correct.</li>
+    <li>Inspect face orientation and remove accidental internal geometry.</li>
+    <li>Export one binary FBX per calibration object.</li>
+    <li>Import through ModelDoc and place the model at scene scale 1,1,1.</li>
+    <li>Measure and compare against the s&amp;box grid and playable character.</li>
+    <li>Change the Blender export preset rather than scaling each placed asset.</li>
+    <li>Repeat until re-exporting produces the same size and placement every time.</li>
+    <li>Record the current Blender/s&amp;box versions in FBX_EXPORT_SETTINGS.md alongside the locked preset.</li>
+  </ol>
+</div>
+
+<!-- ============ 11 Calibration Approval Gate ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">11</span>Calibration Approval Gate</h2>
+  <ul class="checklist">
+    <li>The 12-inch cube measures correctly in s&amp;box.</li>
+    <li>The 96-inch floor aligns with the selected engine grid.</li>
+    <li>The 120-inch wall feels correct beside the actual playable character.</li>
+    <li>The asymmetrical axis marker faces the expected direction and is not mirrored.</li>
+    <li>Every placed model remains at scale 1,1,1.</li>
+    <li>Two floor modules meet without gaps or overlap.</li>
+    <li>Two wall modules meet without gaps or overlap.</li>
+    <li>Re-exporting the source does not move existing instances.</li>
+    <li>Blender and s&amp;box versions are recorded alongside the locked preset.</li>
+    <li>The resolved Forward/Up combination is recorded explicitly, not left as "auto".</li>
+  </ul>
+  <div class="box pass">
+    <span class="box-title">Lock only after passing</span>
+    Save the verified export preset, update the documentation, and archive
+    TS_SBOX_MODELING_TEMPLATE_v1.blend only after every calibration item passes.
+  </div>
+
+  <h3 class="label">Template versioning after v1 is locked</h3>
+  <ol>
+    <li>Do not edit TS_SBOX_MODELING_TEMPLATE_v1.blend in place.</li>
+    <li>Duplicate it to a new versioned file (_v2) and make changes there.</li>
+    <li>Re-run this entire approval checklist against the new version.</li>
+    <li>Re-export and re-verify at least one already-approved test-kit asset against the new template before adopting it project-wide.</li>
+    <li>Record the version change and the reason for it in TEST_LOG.md.</li>
+  </ol>
+  <div class="box warning">
+    <span class="box-title">A newer template is not automatically better</span>
+    Nothing built against v1 should be assumed compatible with v2 until Bay F's reimport test
+    (Section 24) has been repeated against it.
+  </div>
+</div>
+
+<!-- ============ 12 Modular Test Kit ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">12</span>First Modular Test Kit</h2>
+  <p class="lead">Reuse the approved template to create a deliberately small, goofy mid-poly laboratory kit.</p>
+  <h3 class="label">Working file</h3>
+  <div class="code">Production/Blender/Calibration/TS_MODULAR_TEST_KIT.blend</div>
+
+  <table>
+    <tr><th>Architecture asset</th><th>Starting dimensions</th><th>Purpose</th></tr>
+    <tr><td>Floor tile</td><td>96 &times; 96 &times; 4 in</td><td>Primary module</td></tr>
+    <tr><td>Half floor</td><td>48 &times; 96 &times; 4 in</td><td>Layout flexibility</td></tr>
+    <tr><td>Solid wall</td><td>96 &times; 120 &times; 8 in</td><td>Primary wall</td></tr>
+    <tr><td>Half wall</td><td>48 &times; 120 &times; 8 in</td><td>Short span</td></tr>
+    <tr><td>Doorway wall</td><td>96 &times; 120 &times; 8 in</td><td>Player clearance</td></tr>
+    <tr><td>Window wall</td><td>96 &times; 120 &times; 8 in</td><td>Visibility and trim</td></tr>
+    <tr><td>Ceiling tile</td><td>96 &times; 96 &times; 4 in</td><td>Room closure</td></tr>
+    <tr><td>Inside corner</td><td>Fits 8-inch wall family</td><td>Interior turns</td></tr>
+    <tr><td>Outside corner</td><td>Fits 8-inch wall family</td><td>Exterior turns</td></tr>
+    <tr><td>Support column</td><td>16 &times; 16 &times; 120 in</td><td>Structural rhythm</td></tr>
+  </table>
+  <table>
+    <tr><th>Movement asset</th><th>Purpose</th></tr>
+    <tr><td>12-inch crate</td><td>Small step and edge test</td></tr>
+    <tr><td>24-inch crate</td><td>Jump and landing test</td></tr>
+    <tr><td>36-inch crate</td><td>High obstruction and climb-limit test</td></tr>
+    <tr><td>Ramp</td><td>Slope handling</td></tr>
+    <tr><td>Short stair set</td><td>Step height and collision</td></tr>
+    <tr><td>Narrow doorway</td><td>Controller width and camera clearance</td></tr>
+    <tr><td>Low beam</td><td>Crouch/camera-height test if supported</td></tr>
+    <tr><td>Drop platform</td><td>Falling and landing behavior</td></tr>
+  </table>
+  <table>
+    <tr><th>Interactive asset</th><th>Purpose</th></tr>
+    <tr><td>Test button</td><td>Basic press/use input</td></tr>
+    <tr><td>Sliding door</td><td>Moving collision and safe passage</td></tr>
+    <tr><td>Test terminal</td><td>Interaction range and prompt placement</td></tr>
+    <tr><td>Physics crate</td><td>Player-to-object physics</td></tr>
+    <tr><td>Warning light</td><td>Immediate state feedback</td></tr>
+  </table>
+
+  <h3 class="label">Style rules for the test kit</h3>
+  <ul class="bullets">
+    <li>Use thick bevels, overbuilt frames and large readable silhouettes.</li>
+    <li>Exaggerate handles, bolts, warning lights and machinery without adding tiny decorative noise.</li>
+    <li>Keep architecture reusable; put personality into a few replaceable trim and prop pieces.</li>
+    <li>Avoid unique wear and damage until the base material pipeline is proven.</li>
+    <li>Use more geometry only where it improves silhouette, curvature, interaction or close-up quality.</li>
+  </ul>
+
+  <h3 class="label">Poly budget targets (working)</h3>
+  <table>
+    <tr><th>Asset class</th><th>Target triangle ceiling</th></tr>
+    <tr><td>Floor / wall / ceiling module</td><td>&le; 200 tri</td></tr>
+    <tr><td>Trim / corner piece</td><td>&le; 150 tri</td></tr>
+    <tr><td>Freestanding prop (crate, column)</td><td>&le; 400 tri</td></tr>
+    <tr><td>Interactive prop (button, door, terminal)</td><td>&le; 600 tri</td></tr>
+  </table>
+  <div class="box warning">
+    <span class="box-title">Provisional until tested</span>
+    These are starting ceilings, not final rules. If the goofy stylized silhouette needs more geometry
+    to read correctly, revise the number and record why in TEST_LOG.md rather than quietly exceeding it
+    asset by asset.
+  </div>
+</div>
+
+<!-- ============ 13 Material/Texture/Texel ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">13</span>Material, Texture and Texel Density Standards</h2>
+  <table>
+    <tr><th>Material</th><th>Initial use</th></tr>
+    <tr><td>ts_calibration_painted_metal</td><td>Primary wall and equipment shell</td></tr>
+    <tr><td>ts_calibration_dark_metal</td><td>Frames, rails and mechanical structure</td></tr>
+    <tr><td>ts_calibration_rubber</td><td>Feet, grips, bumpers and seals</td></tr>
+    <tr><td>ts_calibration_emissive</td><td>Screens, warning lamps and status lights</td></tr>
+  </table>
+
+  <h3 class="label">Texture naming example</h3>
+  <div class="code">ts_calibration_metal_color.png
+ts_calibration_metal_normal.png
+ts_calibration_metal_rough.png
+ts_calibration_metal_metal.png
+ts_calibration_metal_ao.png
+ts_calibration_screen_selfillum.png</div>
+
+  <h3 class="label">Blender material names</h3>
+  <div class="code">M_CalibrationPaintedMetal
+M_CalibrationDarkMetal
+M_CalibrationRubber
+M_CalibrationScreen</div>
+
+  <div class="box warning">
+    <span class="box-title">Avoid automatic Blender suffixes</span>
+    Do not leave names such as Material.001 or Metal.002. Period-based suffixes can create confusing
+    or collapsed imported material slots.
+  </div>
+
+  <h3 class="label">Material efficiency rules</h3>
+  <ul class="bullets">
+    <li>Background modular pieces should normally use one material.</li>
+    <li>Interactive props should normally use one or two materials.</li>
+    <li>Add more material slots only when they create a visible gameplay or close-up benefit.</li>
+    <li>Use shared materials and consistent texel density instead of unique textures for every wall.</li>
+  </ul>
+
+  <h3 class="label">Texel density standard</h3>
+  <table>
+    <tr><th>Setting</th><th>Value</th></tr>
+    <tr><td>Target texel density</td><td>8 px per inch (128 px per 16 in) &mdash; working value</td></tr>
+    <tr><td>Reference resolution</td><td>1024 &times; 1024 per shared material sheet</td></tr>
+    <tr><td>Consistency rule</td><td>All modular architecture shares one texel density; hero/interactive props may increase it, never decrease it</td></tr>
+  </table>
+
+  <h3 class="label">Lightmap UV (UV2)</h3>
+  <p>Every architecture module intended for static placement gets a second, non-overlapping UV
+  channel reserved for lightmapping, authored at the same time as UV1 &mdash; even though lightmapping
+  itself is not validated until later.</p>
+  <ul class="checklist">
+    <li>UV1 (material) present.</li>
+    <li>UV2 (lightmap, non-overlapping, 0&ndash;1 space) present on architecture.</li>
+    <li>UV2 intentionally skipped for movable/interactive props is noted, not silently absent.</li>
+  </ul>
+  <div class="box rule">
+    <span class="box-title">Why now</span>
+    Retrofitting a second UV channel onto an already-approved modular kit later means re-touching
+    every approved asset. Reserving it during the Modular Test Kit milestone costs little and avoids
+    that rework.
+  </div>
+</div>
+
+<!-- ============ 14 ModelDoc Import ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">14</span>Import into ModelDoc and s&amp;box</h2>
+  <ol>
+    <li>Export each reusable test-kit asset as its own binary FBX.</li>
+    <li>Place source files in the matching Game/Assets/models category.</li>
+    <li>Create or update the corresponding .vmdl in ModelDoc.</li>
+    <li>Assign the final s&amp;box material rather than relying on Blender viewport materials.</li>
+    <li>Place the model in a test scene at scale 1,1,1.</li>
+    <li>Confirm size, orientation, origin, normals, smoothing and material slots.</li>
+    <li>Record the current Blender/s&amp;box versions if this is the first import since the last recorded baseline (Section 04).</li>
+    <li>Record any required exception in IMPORT_CHECKLIST.md.</li>
+  </ol>
+  <h3 class="label">Per-model import checklist</h3>
+  <ul class="checklist">
+    <li>Correct size</li><li>Correct forward direction</li><li>Correct up direction</li>
+    <li>No mirroring</li><li>Correct pivot</li><li>Correct normals</li>
+    <li>Correct smoothing</li><li>No missing faces</li><li>Expected material slots</li>
+    <li>No unexplained scene scaling</li>
+  </ul>
+</div>
+
+<!-- ============ 15 Prefabs and Collision ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">15</span>Functional Prefabs and Collision Authoring</h2>
+  <h3 class="label">Example prefab structure</h3>
+  <div class="tree">PF_CalibrationWall
+&#9500;&#9472; ModelRenderer
+&#9492;&#9472; BoxCollider
+
+PF_TestCrate
+&#9500;&#9472; ModelRenderer
+&#9500;&#9472; BoxCollider
+&#9492;&#9472; RigidBody  [movable version only]
+
+PF_TestDoor
+&#9500;&#9472; DoorFrame
+&#9474;   &#9500;&#9472; ModelRenderer
+&#9474;   &#9492;&#9472; BoxCollider
+&#9492;&#9472; DoorPanel
+    &#9500;&#9472; ModelRenderer
+    &#9492;&#9472; BoxCollider</div>
+
+  <table>
+    <tr><th>Asset</th><th>Initial collision approach</th></tr>
+    <tr><td>Floors</td><td>Simple box collider</td></tr>
+    <tr><td>Walls</td><td>Simple box collider</td></tr>
+    <tr><td>Crates</td><td>Box collider; rigid body only for movable variants</td></tr>
+    <tr><td>Columns</td><td>Box collider</td></tr>
+    <tr><td>Ramps</td><td>Simplest collision shape that matches movement needs</td></tr>
+    <tr><td>Door frame</td><td>Several simple colliders if necessary</td></tr>
+    <tr><td>Decorative bolts and trim</td><td>No individual collision</td></tr>
+  </table>
+
+  <div class="box rule">
+    <span class="box-title">Collision serves gameplay</span>
+    The player should not collide with every bolt, recess or decorative lip. Simplify collision
+    until it supports predictable movement.
+  </div>
+
+  <h3 class="label">Collision authoring convention (per shape)</h3>
+  <table>
+    <tr><th>Shape</th><th>Authoring method</th></tr>
+    <tr><td>Flat floor / wall / ceiling</td><td>Native BoxCollider sized to bounds</td></tr>
+    <tr><td>Column</td><td>Native BoxCollider, or CapsuleCollider if the silhouette reads as round</td></tr>
+    <tr><td>Ramp</td><td>A BoxCollider rotated to match the slope angle &mdash; not a flat box placed under it</td></tr>
+    <tr><td>Stairs</td><td>Either one rotated BoxCollider approximating the slope, or one BoxCollider per step &mdash; pick one convention project-wide and do not mix them</td></tr>
+    <tr><td>Door frame</td><td>Two BoxColliders (frame sides), matching the hinge/frame pivot convention in Section 09</td></tr>
+    <tr><td>Non-box / organic prop</td><td>A convex hull collider generated from a simplified proxy mesh, never the render mesh</td></tr>
+  </table>
+  <div class="box warning">
+    <span class="box-title">Pick one stair convention now</span>
+    Mixing per-step colliders and slope colliders across different staircases in the same project
+    creates inconsistent player-movement feel that is hard to diagnose later.
+  </div>
+
+  <h3 class="label">Physics starting values (movable variants)</h3>
+  <table>
+    <tr><th>Property</th><th>Starting value</th></tr>
+    <tr><td>Mass (physics crate)</td><td>20 kg &mdash; working value</td></tr>
+    <tr><td>Friction</td><td>Default/medium &mdash; tune only if sliding is observed</td></tr>
+  </table>
+  <p style="font-size:9.7pt; color:#3a4a55;">Provisional until Bay D testing (Section 22); record any change and why in TEST_LOG.md.</p>
+
+  <h3 class="label">Prefab approval checks</h3>
+  <ul class="checklist">
+    <li>Renderable model is correctly assigned.</li>
+    <li>Collision matches the intended walkable or blocking surface, using the convention above.</li>
+    <li>Static and movable variants are clearly separated.</li>
+    <li>Prefab name follows the naming standard.</li>
+    <li>A source update can propagate without replacing every placed instance.</li>
+  </ul>
+</div>
+
+<!-- ============ 16 NEW Automation ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">16</span>Automation and Scaling Strategy</h2>
+  <p class="lead">The Pipeline Lab validates the process by hand once. Tester Supreme's long-term goal is a
+  framework that stays reliable as the asset count grows well past the test kit &mdash; that requires
+  reducing how much of the process depends on a human repeating it correctly every time.</p>
+
+  <h3 class="label">Why this matters now, not later</h3>
+  <ul class="bullets">
+    <li>Bay F's reimport test (Section 24) is correct but manual; it does not scale past a handful of
+    assets without becoming a chore that gets skipped under time pressure.</li>
+    <li>Skipped regression checks are exactly how "reliable modular workflow" quietly degrades into
+    "worked once."</li>
+  </ul>
+
+  <h3 class="label">Recommended automation, introduced incrementally</h3>
+  <table>
+    <tr><th>Milestone</th><th>Automation to introduce</th></tr>
+    <tr><td>0.0.2 &mdash; Modular Test Kit</td><td>A Blender script/macro that batch-exports every object in _EXPORT to individual binary FBX files using the locked preset, instead of exporting one at a time by hand.</td></tr>
+    <tr><td>0.0.4 &mdash; Interaction and Reimport</td><td>A lightweight regression log (script or spreadsheet) tracking which test-kit assets have been reimport-tested since their last source change.</td></tr>
+    <tr><td>0.0.5 &mdash; Production Kit Start</td><td>Extend the naming/pivot/collision conventions into a Blender validation script that flags an object before export if its pivot, scale or collection placement doesn't match Sections 09/15.</td></tr>
+    <tr><td>0.1+</td><td>Revisit whether a fuller automated import/validation pass is worth the investment, based on how much manual regression testing actually cost during 0.0.x.</td></tr>
+  </table>
+  <div class="box rule">
+    <span class="box-title">Automation means removing repetitive risk, not tooling for its own sake</span>
+    If a milestone's manual checklist is still fast and reliable, don't automate it yet. Automate the
+    steps that are easy to get subtly wrong at scale, first.
+  </div>
+</div>
+
+<!-- ============ 17 NEW Risk Register ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">17</span>Risk Register</h2>
+  <p class="lead">Named risks get mitigated. Unnamed risks get discovered mid-production.</p>
+  <table>
+    <tr><th>Risk</th><th>Impact if unaddressed</th><th>Mitigation</th></tr>
+    <tr><td>s&amp;box's importer behavior changes under active engine development</td>
+        <td>Silent calibration drift; assets that measure correctly today measure wrong later</td>
+        <td>Section 04 environment pinning and recalibration trigger</td></tr>
+    <tr><td>Blender's FBX exporter behavior differs across versions</td>
+        <td>Same drift, from the authoring side</td>
+        <td>Pin and record Blender version; re-verify the preset after upgrading</td></tr>
+    <tr><td>Manual reimport testing gets skipped under time pressure as the kit grows</td>
+        <td>Prefab/material drift goes unnoticed until it blocks a later milestone</td>
+        <td>Section 16 automation roadmap; a skipped Bay F pass is a documented exception, not silence</td></tr>
+    <tr><td>The template changes after v1 lock without re-validation</td>
+        <td>Assets built against different template versions behave inconsistently</td>
+        <td>Section 11 template versioning procedure</td></tr>
+    <tr><td>A one-off asset breaks naming or pivot convention "just this once"</td>
+        <td>Corner-solution hacks accumulate and make later batch changes unsafe</td>
+        <td>Section 09's rule (fix the source asset, not the instance) plus the Section 15 prefab checks</td></tr>
+    <tr><td>Solo-developer blind spots in subjective pass/fail calls</td>
+        <td>A wrong call goes unchallenged since there is no second reviewer</td>
+        <td>Route every subjective fail, and any close call, through TEST_LOG.md's Root Cause field</td></tr>
+  </table>
+</div>
+
+<!-- ============ 18 Bay Layout ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">18</span>Pipeline Lab Scenario Layout</h2>
+  <p class="lead">Build one compact scene divided into purpose-built testing bays.</p>
+  <table>
+    <tr><th>Bay</th><th>Purpose</th></tr>
+    <tr><td>A - Scale Bay</td><td>Citizen/player comparison, rulers, cubes, doorway and wall proportions.</td></tr>
+    <tr><td>B - Modular Construction Bay</td><td>Room assembled from floors, walls, corners, window, ceiling and columns.</td></tr>
+    <tr><td>C - Movement Course</td><td>Corridor, stairs, ramp, steps, jump, low beam, drop and recovery area.</td></tr>
+    <tr><td>D - Interaction Bay</td><td>Button, warning light, sliding door, terminal and physics crate.</td></tr>
+    <tr><td>E - Material Bay</td><td>Neutral, dark, colored, reflective and backlit material inspection.</td></tr>
+    <tr><td>F - Reimport Bay</td><td>Repeated prefab instances used to verify source updates and material persistence.</td></tr>
+  </table>
+</div>
+
+<!-- ============ 19 Bay A ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">19</span>Bay A &mdash; Scale Test</h2>
+  <ul class="bullets">
+    <li>Playable character/controller</li><li>12-inch cube</li><li>24-inch and 36-inch crates</li>
+    <li>96-inch floor tile</li><li>120-inch wall</li><li>Doorway module</li><li>Visible height ruler</li>
+  </ul>
+  <h3 class="label">Questions to answer</h3>
+  <ul class="checklist">
+    <li>Does the doorway feel intentionally oversized without feeling wrong?</li>
+    <li>Are buttons, terminals and window heights comfortable for the actual camera?</li>
+    <li>Do crates read at the expected size when viewed in first person?</li>
+    <li>Does the Blender Citizen reference agree closely enough with the playable controller?</li>
+    <li>Does the resolved Forward/Up axis marker (Section 10) still face the expected direction here?</li>
+  </ul>
+</div>
+
+<!-- ============ 20 Bay B ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">20</span>Bay B &mdash; Modular Construction Test</h2>
+  <ol>
+    <li>Create a room from four 96-inch floor tiles.</li>
+    <li>Add solid walls, a doorway wall, a window wall and corner pieces.</li>
+    <li>Close the room with ceiling tiles.</li>
+    <li>Place support columns at repeated grid positions.</li>
+    <li>Inspect all seams from both sides and from grazing camera angles.</li>
+    <li>Duplicate and rotate modules without changing their scale.</li>
+  </ol>
+  <h3 class="label">Pass conditions</h3>
+  <ul class="checklist">
+    <li>No visible gaps between expected connections.</li>
+    <li>No overlapping faces that cause flickering.</li>
+    <li>Pivots make placement predictable.</li>
+    <li>Corner solutions do not require per-instance hacks.</li>
+    <li>Floor and ceiling placement follows the same grid logic.</li>
+  </ul>
+</div>
+
+<!-- ============ 21 Bay C ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">21</span>Bay C &mdash; Movement Course</h2>
+  <table>
+    <tr><th>Order</th><th>Element</th><th>Test</th></tr>
+    <tr><td>1</td><td>Flat corridor</td><td>Basic forward and lateral movement</td></tr>
+    <tr><td>2</td><td>Narrow doorway</td><td>Controller width and camera clipping</td></tr>
+    <tr><td>3</td><td>Short stairs</td><td>Step handling and snagging</td></tr>
+    <tr><td>4</td><td>Ramp</td><td>Slope movement</td></tr>
+    <tr><td>5</td><td>12-inch step</td><td>Automatic stepping behavior</td></tr>
+    <tr><td>6</td><td>24-inch crate</td><td>Jump and landing</td></tr>
+    <tr><td>7</td><td>Jumpable gap</td><td>Air control and collision edges</td></tr>
+    <tr><td>8</td><td>Low overhead beam</td><td>Camera/crouch clearance if applicable</td></tr>
+    <tr><td>9</td><td>Drop platform</td><td>Fall and landing behavior</td></tr>
+    <tr><td>10</td><td>Recovery path</td><td>Return without reloading the scene</td></tr>
+  </table>
+  <h3 class="label">Movement checklist</h3>
+  <ul class="checklist">
+    <li>Walk across floor seams without catching.</li>
+    <li>Move along walls without shaking or snagging.</li>
+    <li>Pass through intended doorways cleanly.</li>
+    <li>Move up and down stairs and ramps predictably (per the single stair convention chosen in Section 15).</li>
+    <li>Jump onto the intended crate height.</li>
+    <li>Land without falling through seams.</li>
+    <li>Avoid becoming trapped in inside corners.</li>
+    <li>Fall out of bounds and recover safely.</li>
+  </ul>
+</div>
+
+<!-- ============ 22 Bay D ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">22</span>Bay D &mdash; Basic Interaction Test</h2>
+  <h3 class="label">Required interaction sequence</h3>
+  <table>
+    <tr><th>Step</th><th>Expected result</th></tr>
+    <tr><td>1</td><td>Player approaches the test button.</td></tr>
+    <tr><td>2</td><td>A clear interaction prompt becomes available.</td></tr>
+    <tr><td>3</td><td>Player presses the use input.</td></tr>
+    <tr><td>4</td><td>Warning light immediately changes state.</td></tr>
+    <tr><td>5</td><td>Sliding door opens.</td></tr>
+    <tr><td>6</td><td>Player passes through without collision problems.</td></tr>
+    <tr><td>7</td><td>Terminal closes or resets the door.</td></tr>
+    <tr><td>8</td><td>Physics crate can be pushed without unstable movement.</td></tr>
+  </table>
+  <h3 class="label">Interaction checklist</h3>
+  <ul class="checklist">
+    <li>Prompt appears only at a reasonable distance.</li>
+    <li>Object can be activated from expected approach angles.</li>
+    <li>Object cannot be activated through a wall.</li>
+    <li>Only the intended object activates when several are nearby.</li>
+    <li>Visual state change happens immediately.</li>
+    <li>Door does not permanently trap or crush the player.</li>
+    <li>Scenario can be reset without restarting the entire project.</li>
+    <li>Movable crate does not explode, jitter or tunnel through the floor (compare against Section 15's mass/friction starting values).</li>
+  </ul>
+</div>
+
+<!-- ============ 23 Bay E ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">23</span>Bay E &mdash; Material Inspection</h2>
+  <table>
+    <tr><th>Lighting condition</th><th>What to inspect</th></tr>
+    <tr><td>Neutral bright light</td><td>Base color, normal and roughness accuracy</td></tr>
+    <tr><td>Dark environment</td><td>Emissive readability and black-level response</td></tr>
+    <tr><td>Colored environmental light</td><td>Material consistency under stylized lighting</td></tr>
+    <tr><td>Direct reflection/highlight</td><td>Metalness and roughness behavior</td></tr>
+    <tr><td>Backlighting</td><td>Silhouette, transparency and edge readability</td></tr>
+  </table>
+  <h3 class="label">Material questions</h3>
+  <ul class="checklist">
+    <li>Does painted metal look coated rather than fully metallic?</li>
+    <li>Do rubber parts remain readable without looking glossy?</li>
+    <li>Are normal details visible but not noisy?</li>
+    <li>Are emissive screens bright enough without washing out the panel?</li>
+    <li>Does the material still support the goofy stylized shape language?</li>
+    <li>Does texel density (Section 13) look consistent between adjacent modules?</li>
+  </ul>
+</div>
+
+<!-- ============ 24 Bay F ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">24</span>Bay F &mdash; Reimport and Update Test</h2>
+  <ol>
+    <li>Place several instances of the same wall prefab.</li>
+    <li>Return to Blender and modify one obvious visual detail.</li>
+    <li>Re-export the FBX using the verified preset.</li>
+    <li>Refresh or recompile the imported model.</li>
+    <li>Confirm that every prefab instance updates.</li>
+    <li>Confirm that instance position, rotation and scale remain unchanged.</li>
+    <li>Confirm that material assignments remain connected.</li>
+    <li>Confirm that collision still matches the model.</li>
+    <li>Confirm the lightmap UV2 channel (Section 13), if present, survived the reimport.</li>
+    <li>Repeat once with a material-slot-safe change.</li>
+    <li>Log the result in the regression log introduced in Section 16, even when it passes.</li>
+  </ol>
+  <div class="box warning">
+    <span class="box-title">Critical production test</span>
+    A pipeline that works only for first import is not enough. Tester Supreme depends on being able
+    to revise modular assets without rebuilding the scene.
+  </div>
+</div>
+
+<!-- ============ 25 Milestone Task Lists ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">25</span>Exact Milestone Task Lists</h2>
+
+  <h3 class="label">Tester Supreme 0.0.1 - Foundation</h3>
+  <ul class="checklist">
+    <li>Create the empty s&amp;box Game project.</li>
+    <li>Create the full master folder structure.</li>
+    <li>Install and configure Git LFS; commit .gitattributes (Section 04).</li>
+    <li>Create pipeline_lab.scene and add neutral lighting.</li>
+    <li>Add the standard playable controller and verify movement.</li>
+    <li>Copy citizen_human_male_REF.fbx into the project reference folder.</li>
+    <li>Create TS_SBOX_MODELING_TEMPLATE.blend.</li>
+    <li>Set Blender to Imperial / Inches and set the grid snap increment.</li>
+    <li>Import and organize the Citizen reference.</li>
+    <li>Create the 12-inch calibration cube and asymmetrical axis marker.</li>
+    <li>Export as binary FBX.</li>
+    <li>Import through ModelDoc.</li>
+    <li>Correct the export preset until scale and orientation require no manual fix.</li>
+    <li>Record the initial Blender and s&amp;box environment baseline.</li>
+    <li>Save the verified template and document every setting.</li>
+  </ul>
+
+  <h3 class="label">Tester Supreme 0.0.2 - Modular Test Kit</h3>
+  <ul class="checklist">
+    <li>Duplicate the verified Blender template.</li>
+    <li>Build the architecture, movement and interactive test models.</li>
+    <li>UV unwrap the kit at the consistent texel density (Section 13).</li>
+    <li>Author non-overlapping UV2 lightmap channels on architecture pieces.</li>
+    <li>Create the four calibration materials and texture set.</li>
+    <li>Confirm each asset against its poly budget target (Section 12).</li>
+    <li>Batch-export test-kit assets using the locked preset (script or manual, per Section 16).</li>
+    <li>Create or update the corresponding .vmdl files.</li>
+    <li>Assign final s&amp;box materials.</li>
+    <li>Add simple colliders using the Section 15 authoring convention.</li>
+    <li>Create static and movable variants where needed.</li>
+    <li>Convert configured GameObjects into prefabs.</li>
+    <li>Assemble the first modular room.</li>
+  </ul>
+
+  <h3 class="label">Tester Supreme 0.0.3 - Movement Lab</h3>
+  <ul class="checklist">
+    <li>Build the Scale Bay and Modular Construction Bay.</li>
+    <li>Build the full movement course.</li>
+    <li>Walk every seam and wall edge.</li>
+    <li>Test stairs, ramps, doorway width and jump heights.</li>
+    <li>Test falling, landing and recovery.</li>
+    <li>Correct dimensions or collision in the source assets.</li>
+    <li>Record approved architecture dimensions.</li>
+  </ul>
+
+  <h3 class="label">Tester Supreme 0.0.4 - Interaction and Reimport</h3>
+  <ul class="checklist">
+    <li>Create one pressable button.</li>
+    <li>Connect the button to a warning light and sliding door.</li>
+    <li>Add one terminal reset action.</li>
+    <li>Add one movable physics crate.</li>
+    <li>Test interaction range and obstruction.</li>
+    <li>Test safe door passage and reset behavior.</li>
+    <li>Confirm collision authoring matches the per-shape convention (Section 15).</li>
+    <li>Revise and reimport one Blender model.</li>
+    <li>Confirm prefab updates, materials and collision remain correct.</li>
+    <li>Log the reimport regression result per asset (Section 16).</li>
+    <li>Mark the pipeline approved or record unresolved blockers.</li>
+  </ul>
+
+  <h3 class="label">Tester Supreme 0.0.5 - Production Kit Start</h3>
+  <ul class="checklist">
+    <li>Duplicate the approved template and conventions; do not modify the locked 0.0.x calibration files.</li>
+    <li>Replace test-kit placeholder shapes with the first stylized Calibration Wing modular family, keeping the same dimensions, pivots and collision conventions.</li>
+    <li>Re-run Bay B, C, D and F against the new family before treating it as approved.</li>
+    <li>Extend the naming standard and material library for the new asset family.</li>
+    <li>Record any convention exceptions the stylized pass required.</li>
+  </ul>
+</div>
+
+<!-- ============ 26 Final Approval Gate ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="num">26</span>Final Pipeline Approval Gate</h2>
+  <table>
+    <tr><th>Area</th><th>Approval requirement</th></tr>
+    <tr><td>Blender</td><td>Inches display correctly; Citizen is organized; pivots and export collections are consistent.</td></tr>
+    <tr><td>FBX</td><td>One saved binary preset repeatedly produces correct scale and orientation.</td></tr>
+    <tr><td>ModelDoc</td><td>Models import with expected material slots, normals and no unexplained scaling.</td></tr>
+    <tr><td>Materials</td><td>Shared materials are assigned, visually correct, at the agreed texel density, and survive reimporting.</td></tr>
+    <tr><td>Prefabs</td><td>Configured objects update all placed instances without scene rebuilding.</td></tr>
+    <tr><td>Collision</td><td>Simple collision, built with the Section 15 convention, supports predictable walking, jumping and object movement.</td></tr>
+    <tr><td>Modularity</td><td>Floors, walls, ceilings, corners and doorway pieces connect cleanly.</td></tr>
+    <tr><td>Player testing</td><td>Walk, jump, stairs, ramp, fall, landing and recovery all pass.</td></tr>
+    <tr><td>Interaction</td><td>Button, light, sliding door, terminal and physics crate pass.</td></tr>
+    <tr><td>Version control</td><td>Binary assets tracked via Git LFS; .gitattributes committed; no compiled output tracked.</td></tr>
+    <tr><td>Environment</td><td>Blender and s&amp;box versions recorded and current; recalibration trigger checked.</td></tr>
+    <tr><td>Automation</td><td>At minimum, batch export is in use for the test kit; a manual-only export step is a documented limitation, not silent debt.</td></tr>
+    <tr><td>Documentation</td><td>Settings, measurements, exceptions and fixes are recorded.</td></tr>
+  </table>
+  <div class="box pass">
+    <span class="box-title">Ready for production</span>
+    The pipeline is approved when a new Blender model can be exported, imported, materialed, collided,
+    converted to a prefab and placed in the scene without rediscovering the process &mdash; and without
+    the workflow depending on one person remembering every manual step.
+  </div>
+  <h3 class="label">Decision after approval</h3>
+  <p>Begin Tester Supreme 0.0.5 by replacing the plain test-kit shapes with the first production-ready
+  Calibration Wing family. Keep the same dimensions, pivots, export preset, material conventions and
+  prefab workflow that passed the Pipeline Lab.</p>
+</div>
+
+<!-- ============ Appendix A ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="app-letter">A</span>&nbsp;&nbsp;Naming Standard - Initial Draft</h2>
+  <table>
+    <tr><th>Type</th><th>Pattern</th><th>Example</th></tr>
+    <tr><td>Blender file</td><td>TS_[CATEGORY]_[SET].blend</td><td>TS_ARCH_CalibrationWing.blend</td></tr>
+    <tr><td>Model source</td><td>ts_[category]_[asset].fbx</td><td>ts_arch_wall_96.fbx</td></tr>
+    <tr><td>ModelDoc model</td><td>ts_[category]_[asset].vmdl</td><td>ts_arch_wall_96.vmdl</td></tr>
+    <tr><td>Prefab</td><td>PF_[Category][Asset]</td><td>PF_ArchWall96</td></tr>
+    <tr><td>Prefab variant</td><td>PF_[Category][Asset]_[Variant]</td><td>PF_ArchWall96_B</td></tr>
+    <tr><td>Material</td><td>ts_[set]_[surface]</td><td>ts_calibration_painted_metal</td></tr>
+    <tr><td>Texture</td><td>ts_[set]_[surface]_[map].png</td><td>ts_calibration_metal_rough.png</td></tr>
+    <tr><td>Scene</td><td>[purpose]_[name].scene</td><td>tests_scale_test.scene</td></tr>
+  </table>
+  <div class="box rule">
+    <span class="box-title">Prefab names are concatenated PascalCase by design</span>
+    Unlike files, materials and textures, prefab names intentionally drop the underscore between
+    category and asset. This is a deliberate distinction, not an inconsistency &mdash; keep it that way
+    project-wide rather than mixing conventions.
+  </div>
+  <h3 class="label">Reserved suffix meanings</h3>
+  <table>
+    <tr><th>Suffix</th><th>Meaning</th></tr>
+    <tr><td>_B, _C, ...</td><td>Visual variant with the same footprint and collision &mdash; does not require re-approval (Section 11/15).</td></tr>
+    <tr><td>_v2, _v3, ...</td><td>Revision that changes footprint, pivot or collision &mdash; requires re-approval via the Section 11 procedure before replacing placed instances.</td></tr>
+  </table>
+</div>
+
+<!-- ============ Appendix B ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="app-letter">B</span>&nbsp;&nbsp;Modular Measurement Working Set</h2>
+  <table>
+    <tr><th>Use</th><th>Starting value</th><th>Notes</th></tr>
+    <tr><td>Small increment</td><td>12 in</td><td>Fine prop and movement calibration</td></tr>
+    <tr><td>Secondary increment</td><td>24 in</td><td>Crates, steps and prop spacing</td></tr>
+    <tr><td>Half module</td><td>48 in</td><td>Partial floors and walls</td></tr>
+    <tr><td>Primary module</td><td>96 in</td><td>Main floors, walls and ceilings</td></tr>
+    <tr><td>Wall height</td><td>120 in</td><td>Initial lab room height</td></tr>
+    <tr><td>Wall thickness</td><td>8 in</td><td>Initial architectural family; matches the Section 07 grid snap increment</td></tr>
+  </table>
+  <div class="box warning">
+    <span class="box-title">Measurements are provisional until tested</span>
+    These values are production candidates, not permanent rules. The actual player controller and
+    first-person camera have final authority. Poly budget targets live in Section 12; texel density
+    lives in Section 13 &mdash; both are kept there rather than duplicated here so each number has one
+    home.
+  </div>
+</div>
+
+<!-- ============ Appendix C ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="app-letter">C</span>&nbsp;&nbsp;Test Log Template</h2>
+  <table>
+    <tr><th>Field</th><th>Entry</th></tr>
+    <tr><td>Date</td><td>&nbsp;</td></tr>
+    <tr><td>Build / commit</td><td>&nbsp;</td></tr>
+    <tr><td>Blender / s&amp;box version</td><td>&nbsp;</td></tr>
+    <tr><td>Scene / asset</td><td>&nbsp;</td></tr>
+    <tr><td>Test performed</td><td>&nbsp;</td></tr>
+    <tr><td>Expected result</td><td>&nbsp;</td></tr>
+    <tr><td>Actual result</td><td>&nbsp;</td></tr>
+    <tr><td>Pass / fail</td><td>&nbsp;</td></tr>
+    <tr><td>Root cause</td><td>&nbsp;</td></tr>
+    <tr><td>Fix applied</td><td>&nbsp;</td></tr>
+    <tr><td>Retest result</td><td>&nbsp;</td></tr>
+    <tr><td>Documentation updated</td><td>&nbsp;</td></tr>
+  </table>
+</div>
+
+<!-- ============ Appendix D ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="app-letter">D</span>&nbsp;&nbsp;First Work Session Checklist</h2>
+  <ul class="checklist">
+    <li>Create the TesterSupreme root folder and master subfolders.</li>
+    <li>Create the empty s&amp;box project and pipeline_lab.scene.</li>
+    <li>Confirm the stock player can walk, jump and fall.</li>
+    <li>Install Git LFS and commit .gitattributes before copying any binary reference.</li>
+    <li>Locate and copy citizen_human_male_REF.fbx.</li>
+    <li>Create TS_SBOX_MODELING_TEMPLATE.blend.</li>
+    <li>Set Imperial / Inches, the grid snap increment, and create the reference collections.</li>
+    <li>Import the Citizen reference and place feet at Z = 0.</li>
+    <li>Create the 12-inch cube, 96-inch floor and axis marker.</li>
+    <li>Perform the first binary FBX export.</li>
+    <li>Import the cube through ModelDoc and record the result.</li>
+    <li>Record the initial Blender and s&amp;box versions.</li>
+  </ul>
+</div>
+
+<!-- ============ Appendix E ============ -->
+<div class="section">
+  <div class="banner">Tester Supreme &nbsp;|&nbsp; Pipeline Lab Pre-Production</div>
+  <h2><span class="app-letter">E</span>&nbsp;&nbsp;Revision History</h2>
+  <table>
+    <tr><th>Version</th><th>Date</th><th>Summary of changes</th></tr>
+    <tr><td>1.0</td><td>July 2026</td><td>Initial pre-production plan authored.</td></tr>
+    <tr><td>2.0</td><td>July 2026</td><td>
+      Added Git LFS / version-control policy for binary assets (Section 04); Blender and s&amp;box
+      version pinning with a recalibration trigger (Section 04); a Forward/Up axis hypothesis note
+      instead of an unresolved assumption (Section 10); a template versioning procedure for changes
+      after v1 lock (Section 11); poly budget targets (Section 12); texel density and lightmap UV2
+      standards (Section 13); a per-shape collision authoring convention and physics starting values
+      (Section 15); an automation and scaling roadmap (Section 16); a risk register (Section 17); a
+      previously-missing 0.0.5 milestone task list (Section 25); version-control and environment rows
+      in the Final Approval Gate (Section 26); a prefab variant naming rule (Appendix A); and the
+      Blender/s&amp;box version field in the test log (Appendix C).
+    </td></tr>
+  </table>
+  <p style="text-align:center; color:#1f7f93; font-weight:700; margin-top:40px;">END OF PRE-PRODUCTION PLAN</p>
+</div>
+
+</body>
+</html>

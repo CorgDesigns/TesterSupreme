@@ -70,8 +70,6 @@
           "__guid": "49c48e2d-e341-48f8-ac05-03d9f74bfe67",
           "__enabled": true,
           "Flags": 0,
-          "ContactShadows": true,
-          "Contribution": "Diffuse, Specular, Transmissive",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.91373,0.98039,1,1",
@@ -153,7 +151,6 @@
           "OnComponentUpdate": null,
           "OverrideMassCenter": true,
           "RigidbodyFlags": "DisableCollisionSounds",
-          "SleepThreshold": 2,
           "StartAsleep": false
         },
         {
@@ -249,7 +246,6 @@
           "BodyMass": 500,
           "BodyRadius": 16,
           "BrakePower": 1,
-          "CameraCollisionIgnore": "",
           "CameraOffset": "256,0,12",
           "ColliderObject": {
             "_type": "gameobject",
@@ -552,7 +548,6 @@
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
-              "Billboard": "None",
               "BlendMode": "Normal",
               "FogStrength": 1,
               "HorizontalAlignment": "Center",
@@ -632,7 +627,6 @@
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
-              "Billboard": "None",
               "BlendMode": "Normal",
               "FogStrength": 1,
               "HorizontalAlignment": "Center",
@@ -712,7 +706,6 @@
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
-              "Billboard": "None",
               "BlendMode": "Normal",
               "FogStrength": 1,
               "HorizontalAlignment": "Center",
@@ -832,8 +825,6 @@
                       "FrameRate": 15,
                       "Origin": "0.5,0.5",
                       "LoopMode": "Loop",
-                      "LoopStart": -1,
-                      "LoopEnd": -1,
                       "Frames": [
                         {
                           "Texture": {
@@ -850,7 +841,7 @@
                               "FlipVertical": false,
                               "FlipHorizontal": false
                             },
-                            "compiled": "textures/generated/svgsource/764035df2967839b.vtex"
+                            "compiled": null
                           },
                           "BroadcastMessages": []
                         }
@@ -889,7 +880,6 @@
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
-              "Billboard": "None",
               "BlendMode": "Normal",
               "FogStrength": 1,
               "HorizontalAlignment": "Center",
@@ -1009,8 +999,6 @@
                       "FrameRate": 15,
                       "Origin": "0.5,0.5",
                       "LoopMode": "Loop",
-                      "LoopStart": -1,
-                      "LoopEnd": -1,
                       "Frames": [
                         {
                           "Texture": {
@@ -1027,7 +1015,7 @@
                               "FlipVertical": false,
                               "FlipHorizontal": false
                             },
-                            "compiled": "textures/generated/svgsource/7d3f010fb3b50bec.vtex"
+                            "compiled": null
                           },
                           "BroadcastMessages": []
                         }
@@ -1066,7 +1054,6 @@
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
-              "Billboard": "None",
               "BlendMode": "Normal",
               "FogStrength": 1,
               "HorizontalAlignment": "Center",
@@ -1186,8 +1173,6 @@
                       "FrameRate": 15,
                       "Origin": "0.5,0.5",
                       "LoopMode": "Loop",
-                      "LoopStart": -1,
-                      "LoopEnd": -1,
                       "Frames": [
                         {
                           "Texture": {
@@ -1204,7 +1189,7 @@
                               "FlipVertical": false,
                               "FlipHorizontal": false
                             },
-                            "compiled": "textures/generated/svgsource/7b88cb63547e41c1.vtex"
+                            "compiled": null
                           },
                           "BroadcastMessages": []
                         }
@@ -1243,7 +1228,6 @@
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
-              "Billboard": "None",
               "BlendMode": "Normal",
               "FogStrength": 1,
               "HorizontalAlignment": "Center",
@@ -1323,7 +1307,6 @@
               "__enabled": true,
               "Flags": 0,
               "__version": 2,
-              "Billboard": "None",
               "BlendMode": "Normal",
               "FogStrength": 1,
               "HorizontalAlignment": "Center",
@@ -1443,8 +1426,6 @@
                       "FrameRate": 15,
                       "Origin": "0.5,0.5",
                       "LoopMode": "Loop",
-                      "LoopStart": -1,
-                      "LoopEnd": -1,
                       "Frames": [
                         {
                           "Texture": {
@@ -1461,7 +1442,7 @@
                               "FlipVertical": false,
                               "FlipHorizontal": false
                             },
-                            "compiled": "textures/generated/svgsource/49b0d2675fcf57c6.vtex"
+                            "compiled": null
                           },
                           "BroadcastMessages": []
                         }
@@ -1501,14 +1482,12 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
+      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "bab54360-3186-4d3a-9f92-e9544090f36d"
-        }
-      },
-      "Sandbox.SelectionSetsSystem": {
-        "Data": {
-          "SelectionSets": []
         }
       }
     }
