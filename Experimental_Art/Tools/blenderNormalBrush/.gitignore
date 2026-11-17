@@ -1,0 +1,7 @@
+/test/*.blend1
+/ops/modalDraw.py
+/ops/openGlTestHandler.py
+/test/head.blend
+/deploy
+/build
+/__pycache__

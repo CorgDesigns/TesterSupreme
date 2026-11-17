@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "description": "Authoritative append-only event schema for Tester Supreme engineering issue history.",
+  "event_id": {
+    "pattern": "^evt-[0-9a-f]{64}$",
+    "algorithm": "sha256(canonical_json(record_without_event_id))",
+    "canonical_json": "UTF-8 JSON with recursively sorted object keys and compact separators"
+  },
+  "issue_id": {
+    "pattern": "^SB-BUG-[0-9]{4,}$",
+    "allocation": "max existing numeric suffix plus one; never reuse"
+  },
+  "envelope_required": [
+    "schema_version",
+    "event_id",
+    "issue_id",
+    "event_type",
+    "timestamp_utc",
+    "source_revision",
+    "actor",
+    "data"
+  ],
+  "event_types": [
+    "ISSUE_REPORTED",
+    "ISSUE_TRIAGED",
+    "INVESTIGATION_UPDATED",
+    "ROOT_CAUSE_CONFIRMED",
+    "FIX_PROPOSED",
+    "FIX_APPLIED",
+    "VERIFICATION_RECORDED",
+    "ISSUE_CLOSED",
+    "ISSUE_REOPENED",
+    "ISSUE_BLOCKED",
+    "ISSUE_DEFERRED",
+    "DUPLICATE_LINKED",
+    "PATTERN_IDENTIFIED",
+    "PREVENTION_PROPOSED",
+    "PREVENTION_APPROVED"
+  ],
+  "statuses": [
+    "OPEN",
+    "INVESTIGATING",
+    "ROOT_CAUSE_CONFIRMED",
+    "FIX_PROPOSED",
+    "FIXED_UNVERIFIED",
+    "VERIFIED",
+    "CLOSED",
+    "BLOCKED",
+    "DEFERRED",
+    "REOPENED"
+  ],
+  "severities": ["P0", "P1", "P2", "P3"],
+  "confidence_values": ["UNASSESSED", "LOW", "MEDIUM", "HIGH", "CONFIRMED"],
+  "test_results": ["PASS", "FAIL", "BLOCKED", "NOT_RUN"],
+  "event_data_required": {
+    "ISSUE_REPORTED": ["status_after", "title", "subsystem", "severity", "reproduction_confidence", "root_cause_confidence", "expected_behavior", "actual_behavior", "reproduction_steps", "evidence"],
+    "ISSUE_TRIAGED": ["status_after", "severity", "rationale"],
+    "INVESTIGATION_UPDATED": ["status_after", "findings", "hypotheses", "evidence", "missing_information"],
+    "ROOT_CAUSE_CONFIRMED": ["status_after", "root_cause", "evidence", "confidence"],
+    "FIX_PROPOSED": ["status_after", "proposed_repair", "approved_scope", "risks", "regression_tests"],
+    "FIX_APPLIED": ["status_after", "changed_files", "outcome", "rollback"],
+    "VERIFICATION_RECORDED": ["status_after", "tests", "environment", "limitations", "regression_checks"],
+    "ISSUE_CLOSED": ["status_after", "closure_evidence"],
+    "ISSUE_REOPENED": ["status_after", "reason", "evidence"],
+    "ISSUE_BLOCKED": ["status_after", "blocker", "next_action"],
+    "ISSUE_DEFERRED": ["status_after", "reason", "review_condition"],
+    "DUPLICATE_LINKED": ["status_after", "duplicate_of", "rationale"],
+    "PATTERN_IDENTIFIED": ["status_after", "pattern_id", "description", "issue_ids", "evidence"],
+    "PREVENTION_PROPOSED": ["status_after", "rule_id", "description", "evidence", "approval_status"],
+    "PREVENTION_APPROVED": ["status_after", "rule_id", "approval_status", "evidence"]
+  },
+  "transition_policy": {
+    "initial_event": "ISSUE_REPORTED",
+    "initial_status": "OPEN",
+    "reopen_from": ["VERIFIED", "CLOSED", "DEFERRED"],
+    "terminal_statuses": ["CLOSED"],
+    "notes": "Event-specific status_after values are checked by the validator. The first event for an issue must be ISSUE_REPORTED; later events are processed in physical line order."
+  }
+}
+

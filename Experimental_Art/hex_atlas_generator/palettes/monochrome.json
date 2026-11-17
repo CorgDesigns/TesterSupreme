@@ -1,0 +1,5 @@
+{
+  "name": "Monochrome",
+  "description": "Neutral grayscale values for clean graphic surfaces.",
+  "colors": ["#111111", "#252525", "#404040", "#606060", "#808080", "#A0A0A0", "#C0C0C0", "#E8E8E8"]
+}

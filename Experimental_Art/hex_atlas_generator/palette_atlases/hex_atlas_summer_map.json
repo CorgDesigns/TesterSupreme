@@ -1,0 +1,329 @@
+{
+  "image": "hex_atlas_summer.png",
+  "size": [
+    1024,
+    1024
+  ],
+  "tone_count": 3,
+  "gutter": 4,
+  "filtering": "nearest",
+  "entries": [
+    {
+      "source_color": "#00A6D6",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 1,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.08252,
+            0.249512
+          ]
+        },
+        {
+          "name": "base",
+          "x": 172,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.249512,
+            0.249512
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 343,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.416504,
+            0.249512
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#65D6E8",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 514,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.583496,
+            0.249512
+          ]
+        },
+        {
+          "name": "base",
+          "x": 685,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.750488,
+            0.249512
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 856,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.91748,
+            0.249512
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#FFD166",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 1,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.08252,
+            0.416504
+          ]
+        },
+        {
+          "name": "base",
+          "x": 172,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.249512,
+            0.416504
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 343,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.416504,
+            0.416504
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#FF9F1C",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 514,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.583496,
+            0.416504
+          ]
+        },
+        {
+          "name": "base",
+          "x": 685,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.750488,
+            0.416504
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 856,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.91748,
+            0.416504
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#EF476F",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 1,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.08252,
+            0.583496
+          ]
+        },
+        {
+          "name": "base",
+          "x": 172,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.249512,
+            0.583496
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 343,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.416504,
+            0.583496
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#2EC4B6",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 514,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.583496,
+            0.583496
+          ]
+        },
+        {
+          "name": "base",
+          "x": 685,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.750488,
+            0.583496
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 856,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.91748,
+            0.583496
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#FDFCDC",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 1,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.08252,
+            0.750488
+          ]
+        },
+        {
+          "name": "base",
+          "x": 172,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.249512,
+            0.750488
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 343,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.416504,
+            0.750488
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#126782",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 514,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.583496,
+            0.750488
+          ]
+        },
+        {
+          "name": "base",
+          "x": 685,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.750488,
+            0.750488
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 856,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.91748,
+            0.750488
+          ]
+        }
+      ]
+    }
+  ],
+  "palette": "Summer",
+  "description": "Bright sky, sea, citrus, and warm sun colors.",
+  "variant": "base",
+  "source_palette": [
+    "#00A6D6",
+    "#65D6E8",
+    "#FFD166",
+    "#FF9F1C",
+    "#EF476F",
+    "#2EC4B6",
+    "#FDFCDC",
+    "#126782"
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "image": "hex_atlas_autumn.png",
+  "size": [
+    1024,
+    1024
+  ],
+  "tone_count": 3,
+  "gutter": 4,
+  "filtering": "nearest",
+  "entries": [
+    {
+      "source_color": "#8C2F39",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 1,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.08252,
+            0.249512
+          ]
+        },
+        {
+          "name": "base",
+          "x": 172,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.249512,
+            0.249512
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 343,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.416504,
+            0.249512
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#C45A2A",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 514,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.583496,
+            0.249512
+          ]
+        },
+        {
+          "name": "base",
+          "x": 685,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.750488,
+            0.249512
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 856,
+          "y": 172,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.91748,
+            0.249512
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#E09F3E",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 1,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.08252,
+            0.416504
+          ]
+        },
+        {
+          "name": "base",
+          "x": 172,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.249512,
+            0.416504
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 343,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.416504,
+            0.416504
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#F2CC8F",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 514,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.583496,
+            0.416504
+          ]
+        },
+        {
+          "name": "base",
+          "x": 685,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.750488,
+            0.416504
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 856,
+          "y": 343,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.91748,
+            0.416504
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#606C38",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 1,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.08252,
+            0.583496
+          ]
+        },
+        {
+          "name": "base",
+          "x": 172,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.249512,
+            0.583496
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 343,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.416504,
+            0.583496
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#283618",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 514,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.583496,
+            0.583496
+          ]
+        },
+        {
+          "name": "base",
+          "x": 685,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.750488,
+            0.583496
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 856,
+          "y": 514,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.91748,
+            0.583496
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#6B4226",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 1,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.08252,
+            0.750488
+          ]
+        },
+        {
+          "name": "base",
+          "x": 172,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.249512,
+            0.750488
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 343,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.416504,
+            0.750488
+          ]
+        }
+      ]
+    },
+    {
+      "source_color": "#DDA15E",
+      "variants": [
+        {
+          "name": "shadow",
+          "x": 514,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.583496,
+            0.750488
+          ]
+        },
+        {
+          "name": "base",
+          "x": 685,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.750488,
+            0.750488
+          ]
+        },
+        {
+          "name": "highlight",
+          "x": 856,
+          "y": 685,
+          "width": 167,
+          "height": 167,
+          "uv_center": [
+            0.91748,
+            0.750488
+          ]
+        }
+      ]
+    }
+  ],
+  "palette": "Autumn",
+  "description": "Rust, amber, leaves, bark, and late-afternoon light.",
+  "variant": "base",
+  "source_palette": [
+    "#8C2F39",
+    "#C45A2A",
+    "#E09F3E",
+    "#F2CC8F",
+    "#606C38",
+    "#283618",
+    "#6B4226",
+    "#DDA15E"
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "size": [
+    512,
+    512
+  ],
+  "seed": 42,
+  "algorithm": "brush_stroke_cells",
+  "source": "high-contrast smooth unit-normal field with 8-pixel black padding",
+  "purpose": "preview gallery with intentionally sparse, high-contrast cells",
+  "controls": {
+    "density": 0.12,
+    "shape_size": 0.82,
+    "length_variation": 0.08,
+    "edge_softness": 1.5,
+    "width_variance": 0.05,
+    "curvature": 0.85,
+    "segments": 6,
+    "roughness": 0.7,
+    "symmetry": 0.4,
+    "branching": 0.8,
+    "samples_per_stroke": 11,
+    "edge_selection": "distinct"
+  },
+  "samples": [
+    {
+      "shape": "capsule",
+      "category": "Legacy",
+      "description": "rounded equal-width stroke",
+      "file": "01_capsule.png",
+      "bytes": 14942,
+      "sha256": "c17e6047feef7c6727e58b6537f5d9c35a923bea8c7614b0ed59e69c857f76ef"
+    },
+    {
+      "shape": "swirl",
+      "category": "Legacy",
+      "description": "curved sweeping stroke",
+      "file": "02_swirl.png",
+      "bytes": 16071,
+      "sha256": "d41f195ce598ba91f97060c965b971d96a376fc02a827582edfcf4d597485539"
+    },
+    {
+      "shape": "sharp-start",
+      "category": "Legacy",
+      "description": "pointed start with rounded end",
+      "file": "03_sharp-start.png",
+      "bytes": 13311,
+      "sha256": "bb9601ed63b4150bd5922a684d9adbfd4b5cd5c97fb376052c03460be11473c7"
+    },
+    {
+      "shape": "sharp-end",
+      "category": "Legacy",
+      "description": "rounded start with pointed end",
+      "file": "04_sharp-end.png",
+      "bytes": 13327,
+      "sha256": "15efa67f9cf86a79ad24c376dac21ba96bc0f023556dece435d910c1c6d9e2f6"
+    },
+    {
+      "shape": "sharp-both",
+      "category": "Legacy",
+      "description": "pointed lens or diamond",
+      "file": "05_sharp-both.png",
+      "bytes": 15692,
+      "sha256": "8225efc866aa195a218121d20aff0007f64e5fdf294ae550fd2fbcb841503db0"
+    },
+    {
+      "shape": "grass-blade",
+      "category": "Foliage",
+      "description": "tapered blade with a natural bend",
+      "file": "06_grass-blade.png",
+      "bytes": 14494,
+      "sha256": "b9ea801b07e29295b1618f61e918b531eb6f6775591aaf5ad82b2f3d6925eb34"
+    },
+    {
+      "shape": "grass-clump",
+      "category": "Foliage",
+      "description": "clustered lobed grass blade",
+      "file": "07_grass-clump.png",
+      "bytes": 13646,
+      "sha256": "eb5bf907eb8169c8c4d787dd99b4e7bfa9d37c83aa2c83e5e37f4e3d2fcb4b25"
+    },
+    {
+      "shape": "leaf",
+      "category": "Foliage",
+      "description": "smooth symmetrical plant leaf",
+      "file": "08_leaf.png",
+      "bytes": 15885,
+      "sha256": "673a9fcd6c927ec1d44be9d8be73bc2c4a0fefc27852d53e1714e70df2a3f7c0"
+    },
+    {
+      "shape": "branching-twig",
+      "category": "Foliage",
+      "description": "branch-like jagged twig or root",
+      "file": "09_branching-twig.png",
+      "bytes": 13421,
+      "sha256": "458c61d22df8f1c2e8fa2b0ac1993cdf4be93bf31337e9d1ba9b61adbd15369d"
+    },
+    {
+      "shape": "feather",
+      "category": "Animal",
+      "description": "barbed feather vane",
+      "file": "10_feather.png",
+      "bytes": 16928,
+      "sha256": "edda285df34d1dbe25a98280015d13a24a59ed894277979b602c965f531c9a06"
+    },
+    {
+      "shape": "fur-tuft",
+      "category": "Animal",
+      "description": "short pointed fur or hair tuft",
+      "file": "11_fur-tuft.png",
+      "bytes": 14964,
+      "sha256": "9b0b8c49a8e6b21438126b0805c8c04e6f74379edbe0562450f17e1a767241be"
+    },
+    {
+      "shape": "fish-scale",
+      "category": "Animal",
+      "description": "overlapping shield-shaped scale",
+      "file": "12_fish-scale.png",
+      "bytes": 13419,
+      "sha256": "deb45a8b510b6598a8adb5c26025b36c5defa39fa6ce5b4f9831450bed4ba679"
+    },
+    {
+      "shape": "beetle-shell",
+      "category": "Insect",
+      "description": "rounded domed beetle or shell plate",
+      "file": "13_beetle-shell.png",
+      "bytes": 12009,
+      "sha256": "1121b6f48c50d0cdfd3ed8de2e2cfae3c6dae89ffe64471a647e3656ce0fca92"
+    },
+    {
+      "shape": "insect-wing",
+      "category": "Insect",
+      "description": "veined tapered wing",
+      "file": "14_insect-wing.png",
+      "bytes": 13364,
+      "sha256": "b8d3a6e8478579eea3a563609b330e178602c02f8cb7a70ee6fcfc43d740cb57"
+    },
+    {
+      "shape": "scale",
+      "category": "Organic",
+      "description": "teardrop scale",
+      "file": "15_scale.png",
+      "bytes": 12406,
+      "sha256": "526fea738a6ebf4f26acec113ad973711fc73e0981f99f937e7f80ba59202749"
+    },
+    {
+      "shape": "petal",
+      "category": "Organic",
+      "description": "asymmetrical flower petal",
+      "file": "16_petal.png",
+      "bytes": 15129,
+      "sha256": "80187166529eb8e584885399c2edfb396201d54f92334732a72a01acb52371d9"
+    },
+    {
+      "shape": "pine-needle",
+      "category": "Organic",
+      "description": "narrow tapered needle or fiber",
+      "file": "17_pine-needle.png",
+      "bytes": 13367,
+      "sha256": "28c5ee813f3b6cbbd50ce22ac60108d59ec88b2bb0fa4dc65c60740f13725941"
+    },
+    {
+      "shape": "scallop",
+      "category": "Organic",
+      "description": "lobed shell or decorative edge",
+      "file": "18_scallop.png",
+      "bytes": 13077,
+      "sha256": "9c24a5562797d3145b1bea215f4aab16b0d28521d32d478ebb06f912ae2de926"
+    },
+    {
+      "shape": "vine",
+      "category": "Organic",
+      "description": "narrow S-curved vine",
+      "file": "19_vine.png",
+      "bytes": 13985,
+      "sha256": "7603ef5d1c5eb13e201ed087bcfa71d7bb0ba3d2ceb45852fe6fd11133ee99fa"
+    },
+    {
+      "shape": "bark",
+      "category": "Organic",
+      "description": "vertical lobed bark band",
+      "file": "20_bark.png",
+      "bytes": 13161,
+      "sha256": "3742a33b739fc4186d4dbaa91fd66e6231c2ed73cf356d0075abb42c71b98121"
+    },
+    {
+      "shape": "moss-patch",
+      "category": "Organic",
+      "description": "rough clustered moss island",
+      "file": "21_moss-patch.png",
+      "bytes": 16642,
+      "sha256": "a3ecf7f77c3c862652732738d4bc0af3e60cb74fec462fef47647a54dbadf7ec"
+    },
+    {
+      "shape": "tentacle",
+      "category": "Organic",
+      "description": "curving tapered tentacle or tendril",
+      "file": "22_tentacle.png",
+      "bytes": 14780,
+      "sha256": "fd6ef83d0d111f212e8b6c29f0aa072b62afdf2d50655f073fb5b9747f83bfa2"
+    },
+    {
+      "shape": "pebble",
+      "category": "Natural material",
+      "description": "smooth oval stone or seed",
+      "file": "23_pebble.png",
+      "bytes": 16061,
+      "sha256": "0fb9b4a770caa3a5ef02731322fe93f1d57460c1648c65234b8ce1f4967c288a"
+    },
+    {
+      "shape": "boulder",
+      "category": "Natural material",
+      "description": "rough rounded rock",
+      "file": "24_boulder.png",
+      "bytes": 16528,
+      "sha256": "a94eaeedef9458badbf6eed21d1bde8d8cda27e25f610ae10edabf6c62e75d94"
+    },
+    {
+      "shape": "crack",
+      "category": "Natural material",
+      "description": "narrow jagged fracture",
+      "file": "25_crack.png",
+      "bytes": 11689,
+      "sha256": "7a7c7c05e03971cd49c79d17030d60ddcc1e3443d41fb09448adfad1b182db7c"
+    },
+    {
+      "shape": "crystal",
+      "category": "Mineral",
+      "description": "faceted pointed crystal",
+      "file": "26_crystal.png",
+      "bytes": 16366,
+      "sha256": "39ba4fdef8f4bf45d5c75d518dd437edab50028d17bfd300ef7fa2bf0e4ce3e9"
+    },
+    {
+      "shape": "shard",
+      "category": "Mineral",
+      "description": "splintered mineral shard",
+      "file": "27_shard.png",
+      "bytes": 15846,
+      "sha256": "7631b7e2df0115cdc4615b06169686624afaaebae2be3713255269367254ce50"
+    },
+    {
+      "shape": "chevron",
+      "category": "Manufactured",
+      "description": "bent V-shaped manufactured stroke",
+      "file": "28_chevron.png",
+      "bytes": 11212,
+      "sha256": "656fd80e49b0a5c94bc614015d731c18e4bedfda1a673cd210cb666ba307236a"
+    },
+    {
+      "shape": "circuit-trace",
+      "category": "Manufactured",
+      "description": "narrow technological conduit",
+      "file": "29_circuit-trace.png",
+      "bytes": 9701,
+      "sha256": "f6422fa9453103b134a854a8873f9e56ae2a1291b8640e50e2ff3b7246b81b6a"
+    },
+    {
+      "shape": "diamond-panel",
+      "category": "Panel",
+      "description": "rotated diamond plate",
+      "file": "30_diamond-panel.png",
+      "bytes": 11259,
+      "sha256": "71a2c0ebe07b4286f747098d98574e7290fbee27b6c2545f7ac6ec752af066e9"
+    },
+    {
+      "shape": "octagon-panel",
+      "category": "Panel",
+      "description": "regular octagonal plate",
+      "file": "31_octagon-panel.png",
+      "bytes": 12484,
+      "sha256": "b9b8f47d3f14cb56ffcf259ad6759373359cb1eb2116f3d6b32d3f7bf44c1d87"
+    },
+    {
+      "shape": "hexagon",
+      "category": "Panel",
+      "description": "regular hexagonal plate",
+      "file": "32_hexagon.png",
+      "bytes": 15496,
+      "sha256": "f280c44e91d1248eda3df775fed9cf2346495933d1170a1a0988ef337fe7267f"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+export/*
+!export/.gitkeep
+export/test_runtime_tmp/
+
+to_process/*
+!to_process/.gitkeep

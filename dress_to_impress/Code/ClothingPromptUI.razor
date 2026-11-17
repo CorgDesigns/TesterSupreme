@@ -1,0 +1,22 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+    @if ( ShowPrompt )
+    {
+        <div class="title">@MyStringValue</div>
+    }
+</root>
+
+@code
+{
+    [Property] public bool ShowPrompt { get; set; } = false;
+
+    [Property, TextArea]
+    public string MyStringValue { get; set; } = "Hello World!";
+
+    protected override int BuildHash()
+        => System.HashCode.Combine( MyStringValue, ShowPrompt );
+}
